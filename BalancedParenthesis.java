@@ -5,6 +5,8 @@ public class BalancedParenthesis {
     private static Stack s = new Stack();
     public static void main(String[] args) {
 
+        System.out.println(isBalanced("("));
+        System.out.println(isBalanced(")"));
         System.out.println(isBalanced("()"));
         System.out.println(isBalanced("()()()(())"));
         System.out.println(isBalanced("()()())"));
@@ -13,6 +15,10 @@ public class BalancedParenthesis {
     }
 
     public static boolean isBalanced(final String stringToCheck) {
+        
+        if(stringToCheck.length() == 1) {
+            return false;
+        }
 
         for(int i=0;i<stringToCheck.length(); i++) {
 
